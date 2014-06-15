@@ -1,9 +1,7 @@
-Title
+Reproducible Research - Assignment
 ========================================================
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
-
-When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Load the data
 
 
 ```r
@@ -18,14 +16,6 @@ install.packages("ggplot2")
 
 ```r
 library(ggplot2)
-```
-
-```
-## Find out what's changed in ggplot2 with
-## news(Version == "1.0.0", package = "ggplot2")
-```
-
-```r
 setwd("~/Documents/Coursera/Reproducible Research/Assignments/Assignment1")
 ds<-read.csv("./Data/activity.csv",header=TRUE)
 ds$date <- as.Date(ds$date,format = "%Y-%m-%d")
@@ -159,13 +149,6 @@ Next, create a panel plot to show the difference between weekday and weekend.
 
 ```r
     library(gridExtra)
-```
-
-```
-## Loading required package: grid
-```
-
-```r
     grid.arrange(week_plot,weekend_plot)
 ```
 
